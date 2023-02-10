@@ -1654,7 +1654,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 5
-  speed: 10
+  speed: 30
+--- !u!1 &541154573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 541154575}
+  - component: {fileID: 541154574}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &541154574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541154573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbe3de9328731b41abcd7bce0b76c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _instanceUnit: {fileID: 0}
+--- !u!4 &541154575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541154573}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -57.589264, y: -28.18983, z: -17.852135}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &554388839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2739,6 +2783,7 @@ GameObject:
   - component: {fileID: 1010354913}
   - component: {fileID: 1010354912}
   - component: {fileID: 1010354914}
+  - component: {fileID: 1010354915}
   m_Layer: 0
   m_Name: Gate_Red
   m_TagString: Untagged
@@ -2774,6 +2819,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15d4f73f6d727f478082833373ab470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitPrefab: {fileID: 8591622513442050379, guid: 273ecf7fee2bb8443a7240797985c244,
+    type: 3}
+  _moveSpeed: 1
+  _health: 10
+  _lightDamage: 1
+  _heavyDamage: 3
+  _missAbility: 0.5
 --- !u!65 &1010354913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2805,6 +2857,24 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1010354915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010354910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ce7e12439f16f4d95beab154710e80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitPrefab: {fileID: 0}
+  _moveSpeed: 1
+  _health: 10
+  _lightDamage: 1
+  _heavyDamage: 3
+  _missAbility: 0.5
 --- !u!1001 &1031826336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4345,6 +4415,7 @@ GameObject:
   - component: {fileID: 1617742200}
   - component: {fileID: 1617742199}
   - component: {fileID: 1617742201}
+  - component: {fileID: 1617742202}
   m_Layer: 0
   m_Name: Gate_Blue
   m_TagString: Untagged
@@ -4380,6 +4451,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15d4f73f6d727f478082833373ab470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitPrefab: {fileID: 9037266777420385061, guid: bc98beccb39f74e40a388467d9a13ea5,
+    type: 3}
+  _moveSpeed: 1
+  _health: 10
+  _lightDamage: 1
+  _heavyDamage: 3
+  _missAbility: 0.5
 --- !u!65 &1617742200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4411,6 +4489,24 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1617742202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617742197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ce7e12439f16f4d95beab154710e80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitPrefab: {fileID: 0}
+  _moveSpeed: 1
+  _health: 10
+  _lightDamage: 1
+  _heavyDamage: 3
+  _missAbility: 0.5
 --- !u!1001 &1633726093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5124,7 +5220,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1893807192}
   - component: {fileID: 1893807191}
-  - component: {fileID: 1893807190}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -5132,18 +5227,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1893807190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893807189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1893807191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5566,6 +5649,7 @@ GameObject:
   - component: {fileID: 2096191720}
   - component: {fileID: 2096191719}
   - component: {fileID: 2096191721}
+  - component: {fileID: 2096191722}
   m_Layer: 0
   m_Name: Gate_Green
   m_TagString: Untagged
@@ -5601,6 +5685,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15d4f73f6d727f478082833373ab470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitPrefab: {fileID: 4185623572910277781, guid: 68eb305430b854240b1d266d78486a1c,
+    type: 3}
+  _moveSpeed: 1
+  _health: 10
+  _lightDamage: 1
+  _heavyDamage: 3
+  _missAbility: 0.5
 --- !u!65 &2096191720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5632,3 +5723,21 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &2096191722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096191717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ce7e12439f16f4d95beab154710e80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitPrefab: {fileID: 0}
+  _moveSpeed: 1
+  _health: 10
+  _lightDamage: 1
+  _heavyDamage: 3
+  _missAbility: 0.5
