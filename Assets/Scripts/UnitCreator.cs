@@ -7,11 +7,12 @@ namespace Ziggurat
         [SerializeField] GameObject unitPrefab;
 
         [Header("Configs")]
-        [SerializeField] private float _moveSpeed = 1f;
-        [SerializeField] private int _health = 10;
-        [SerializeField] private int _lightDamage = 1;
-        [SerializeField] private int _heavyDamage = 3;
-        [SerializeField] private float _missAbility = 0.5f;
+        [SerializeField] public float _moveSpeed = 1f;
+        [SerializeField] public int _health = 10;
+        [SerializeField] public int _lightDamage = 1;
+        [SerializeField] public int _heavyDamage = 3;
+        [SerializeField] public float _missingChance = 0.5f;
+        [SerializeField] public float _criticalChance = 2.5f;
         
       
 
