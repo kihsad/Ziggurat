@@ -19,8 +19,9 @@ namespace Ziggurat
         {
             GameObject KnightUnit = Instantiate(unitPrefab);
 
-            KnightUnit.transform.position = new Vector3(transform.position.x, transform.position.y + 3f, transform.position.z);
-                        
+            KnightUnit.transform.position = new Vector3(1f, 1f, 1f);
+            //KnightUnit.transform.position = new Vector3(transform.position.x, transform.position.y + 3f, transform.position.z);
+
             Debug.Log("Unit Knight is on!");
         }
 
