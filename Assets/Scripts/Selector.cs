@@ -28,7 +28,7 @@ public class Selector : MonoBehaviour
             {
                 if (hit.collider.TryGetComponent(out Interactable interactable))
                 {
-                    interactable.OnHoverEnter();
+                    interactable.OnHoverExit();
                 }
             }
         }

@@ -16,7 +16,8 @@ public class Interactable : UnitCreator
     private void OnEnable()
     {
         outline = GetComponent<Outline>();
-        outline.OutlineWidth = 0;      
+        outline.OutlineWidth = 0;
+        Uipanel.SetActive(false);
     }
     public void OnHoverEnter()
     {
