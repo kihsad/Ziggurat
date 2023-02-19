@@ -5,22 +5,31 @@ namespace Ziggurat
     public class UnitCreator : MonoBehaviour
     {
         [SerializeField] GameObject unitPrefab;
+        [SerializeField] private MeshRenderer _blockMeshRenderer;
+        [SerializeField] GameObject SpawnPoint;
 
         [Header("Configs")]
-        [SerializeField] public float _moveSpeed = 1f;
-        [SerializeField] public int _health = 10;
-        [SerializeField] public int _lightDamage = 1;
-        [SerializeField] public int _heavyDamage = 3;
-        [SerializeField] public float _missingChance = 0.5f;
-        [SerializeField] public float _criticalChance = 2.5f;
+        [SerializeField] public float _moveSpeed;
+        [SerializeField] public int _health;
+        [SerializeField] public int _lightDamage;
+        [SerializeField] public int _heavyDamage;
+        [SerializeField] public float _missingChance;
+        [SerializeField] public float _criticalChance;
         
       
 
         public void InstantiateKnightUnit()
         {
-            GameObject KnightUnit = Instantiate(unitPrefab);
+            //GameObject KnightUnit = Instantiate(unitPrefab);
 
-            KnightUnit.transform.position = new Vector3(transform.position.x, transform.position.y + 3f, transform.position.z);
+            Instantiate(unitPrefab, SpawnPoint.transform.position + Vector3.up * _blockMeshRenderer.bounds.extents.y, Quaternion.identity);
+
+
+            //KnightUnit.transform.position = new Vector3(transform.position.x, transform.position.y + 3f, transform.position.z);
+
+            //KnightUnit.transform.position = new Vector3(-20f,1f,1f);
+
+            //KnightUnit.transform.position = new Vector3(SpawnPoint.transform.position.x, SpawnPoint.transform.position.y + 2f, SpawnPoint.transform.position.z);
 
             Debug.Log("Unit Knight is on!");
         }
