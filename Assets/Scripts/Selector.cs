@@ -16,16 +16,20 @@ public class Selector : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, 100))
             {
-                var interactable = hit.collider.GetComponent<Interactable>();
-                interactable.OnHoverEnter();
+                if (hit.collider.TryGetComponent(out Interactable interactable))
+                {
+                    interactable.OnHoverEnter();
+                }
             }
         }
         if (Input.GetMouseButtonDown(1))
         {
             if (Physics.Raycast(ray, out hit, 100))
             {
-                var interactable = hit.collider.GetComponent<Interactable>();
-                interactable.OnHoverExit();
+                if (hit.collider.TryGetComponent(out Interactable interactable))
+                {
+                    interactable.OnHoverEnter();
+                }
             }
         }
 
