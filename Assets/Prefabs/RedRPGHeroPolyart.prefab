@@ -1759,9 +1759,7 @@ GameObject:
   - component: {fileID: 8532544406534033615}
   - component: {fileID: 8592048530499852854}
   - component: {fileID: 8592048530499852855}
-  - component: {fileID: 927428657428244879}
   - component: {fileID: 8592048530499852858}
-  - component: {fileID: 4535415736219687094}
   m_Layer: 0
   m_Name: RedRPGHeroPolyart
   m_TagString: Untagged
@@ -1834,24 +1832,6 @@ CapsuleCollider:
   m_Height: 2.03
   m_Direction: 1
   m_Center: {x: 0, y: 0.99, z: 0}
---- !u!114 &927428657428244879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8591622513442050379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15d4f73f6d727f478082833373ab470, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitPrefab: {fileID: 0}
-  _moveSpeed: 1
-  _health: 10
-  _lightDamage: 1
-  _heavyDamage: 3
-  _missAbility: 0.5
 --- !u!114 &8592048530499852858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,24 +1846,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 8532544406534033615}
   _collider: {fileID: 8592048530499852857}
---- !u!114 &4535415736219687094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8591622513442050379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &8591626340397802007
 GameObject:
   m_ObjectHideFlags: 0
