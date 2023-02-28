@@ -5,7 +5,7 @@ using UnityEngine;
 using Ziggurat;
 
 [RequireComponent(typeof(Outline))]
-public class Interactable : UnitCreator
+public class Interactable : MonoBehaviour
 {
     private Outline outline;
 

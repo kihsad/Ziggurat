@@ -6,19 +6,17 @@ using UnityEngine.AI;
 public class PatrolBehaviour : StateMachineBehaviour
 {
     float timer;
-    List<Transform> points = new List<Transform>();
+    Transform point;
     NavMeshAgent agent;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timer = 0;
-        Transform pointsObject = FindObjectOfType<Point>().transform;
-        foreach (Transform t in pointsObject)
-            points.Add(t);
+        Transform pointObject = FindObjectOfType<Point>().transform;
 
         agent = animator.GetComponent<NavMeshAgent>();
-        agent.SetDestination(points[0].position);
+        agent.SetDestination(point.position);
 
     }
 

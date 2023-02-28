@@ -2,7 +2,7 @@
 
 namespace Ziggurat
 {
-    public class UnitCreator : MonoBehaviour
+    public class UnitCreator : Interactable
     {
         [SerializeField] GameObject unitPrefab;
         [SerializeField] private MeshRenderer _blockMeshRenderer;
