@@ -20,7 +20,7 @@ namespace Ziggurat
 
         public void InstantiateKnightUnit()
         {
-            //GameObject KnightUnit = Instantiate(unitPrefab);
+            GameObject KnightUnit = Instantiate(unitPrefab);
 
             Instantiate(unitPrefab, SpawnPoint.transform.position + Vector3.up * _blockMeshRenderer.bounds.extents.y, Quaternion.identity);
 

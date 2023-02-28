@@ -2338,6 +2338,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000005, y: 12.000033, z: 10.000049}
   m_Center: {x: 0.00000023841864, y: 5.9999976, z: -0.000019788746}
+--- !u!23 &142533184 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: 59bfaabf5c24e1544a99ff1e59e464b5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2079443544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &143684572
 GameObject:
   m_ObjectHideFlags: 0
@@ -9819,16 +9825,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15d4f73f6d727f478082833373ab470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitPrefab: {fileID: 8591622513442050379, guid: 273ecf7fee2bb8443a7240797985c244,
-    type: 3}
-  SpawnPoint: {fileID: 0}
-  _moveSpeed: 1
-  _health: 10
-  _lightDamage: 1
-  _heavyDamage: 3
-  _missingChance: 0.5
-  _criticalChance: 2.5
   Uipanel: {fileID: 2015290896}
+  _camera: {fileID: 532899569}
+  _cameraFly: {fileID: 532899573}
 --- !u!65 &1010354913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9872,7 +9871,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ce7e12439f16f4d95beab154710e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitPrefab: {fileID: 1010354910}
+  Uipanel: {fileID: 2015290896}
+  _camera: {fileID: 0}
+  _cameraFly: {fileID: 0}
+  unitPrefab: {fileID: 0}
+  _blockMeshRenderer: {fileID: 0}
   SpawnPoint: {fileID: 0}
   _moveSpeed: 1
   _health: 10
@@ -10567,9 +10570,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ce7e12439f16f4d95beab154710e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Uipanel: {fileID: 1492393841}
+  _camera: {fileID: 532899569}
+  _cameraFly: {fileID: 532899573}
   unitPrefab: {fileID: 4185623572910277781, guid: 68eb305430b854240b1d266d78486a1c,
     type: 3}
-  SpawnPoint: {fileID: 2096191717}
+  _blockMeshRenderer: {fileID: 142533184}
+  SpawnPoint: {fileID: 142533182}
   _moveSpeed: 1
   _health: 10
   _lightDamage: 1
@@ -10810,9 +10817,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f20e8e45cccde34a92484867d3080a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Uipanel: {fileID: 2015290896}
+  _camera: {fileID: 532899569}
+  _cameraFly: {fileID: 532899573}
   unitPrefab: {fileID: 8591622513442050379, guid: 273ecf7fee2bb8443a7240797985c244,
     type: 3}
-  SpawnPoint: {fileID: 1010354910}
+  _blockMeshRenderer: {fileID: 1975873408}
+  SpawnPoint: {fileID: 1975873406}
   _moveSpeed: 1
   _health: 10
   _lightDamage: 1
@@ -13104,9 +13115,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ce7e12439f16f4d95beab154710e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Uipanel: {fileID: 141816858}
+  _camera: {fileID: 532899569}
+  _cameraFly: {fileID: 532899573}
   unitPrefab: {fileID: 9037266777420385061, guid: bc98beccb39f74e40a388467d9a13ea5,
     type: 3}
-  SpawnPoint: {fileID: 1617742197}
+  _blockMeshRenderer: {fileID: 1965134314}
+  SpawnPoint: {fileID: 1965134312}
   _moveSpeed: 1
   _health: 10
   _lightDamage: 1
@@ -16368,16 +16383,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15d4f73f6d727f478082833373ab470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitPrefab: {fileID: 9037266777420385061, guid: bc98beccb39f74e40a388467d9a13ea5,
-    type: 3}
-  SpawnPoint: {fileID: 0}
-  _moveSpeed: 1
-  _health: 10
-  _lightDamage: 1
-  _heavyDamage: 3
-  _missingChance: 0.5
-  _criticalChance: 2.5
   Uipanel: {fileID: 141816858}
+  _camera: {fileID: 532899569}
+  _cameraFly: {fileID: 532899573}
 --- !u!65 &1617742200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16421,8 +16429,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ce7e12439f16f4d95beab154710e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitPrefab: {fileID: 0}
-  SpawnPoint: {fileID: 0}
+  Uipanel: {fileID: 141816858}
+  _camera: {fileID: 532899569}
+  _cameraFly: {fileID: 532899573}
+  unitPrefab: {fileID: 9037266777420385061, guid: bc98beccb39f74e40a388467d9a13ea5,
+    type: 3}
+  _blockMeshRenderer: {fileID: 1965134314}
+  SpawnPoint: {fileID: 1965134312}
   _moveSpeed: 1
   _health: 10
   _lightDamage: 1
@@ -17829,6 +17842,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9e27bf700f7c24840bc80e8820b61d39, type: 2}
+    - target: {fileID: 2300000, guid: 59bfaabf5c24e1544a99ff1e59e464b5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59bfaabf5c24e1544a99ff1e59e464b5, type: 3}
 --- !u!4 &1772661148 stripped
@@ -19262,6 +19279,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000005, y: 12.000033, z: 10.000049}
   m_Center: {x: 0.00000023841864, y: 5.9999976, z: -0.000019788746}
+--- !u!23 &1965134314 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: 59bfaabf5c24e1544a99ff1e59e464b5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1551203232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1975873406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 59bfaabf5c24e1544a99ff1e59e464b5,
@@ -19281,6 +19304,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000001, y: 12.000033, z: 10.000045}
   m_Center: {x: 0.00000023841856, y: 5.9999976, z: -0.00001978874}
+--- !u!23 &1975873408 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: 59bfaabf5c24e1544a99ff1e59e464b5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1772661147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1981998505
 GameObject:
   m_ObjectHideFlags: 0
@@ -20299,16 +20328,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15d4f73f6d727f478082833373ab470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitPrefab: {fileID: 4185623572910277781, guid: 68eb305430b854240b1d266d78486a1c,
-    type: 3}
-  SpawnPoint: {fileID: 0}
-  _moveSpeed: 1
-  _health: 10
-  _lightDamage: 1
-  _heavyDamage: 3
-  _missingChance: 0.5
-  _criticalChance: 2.5
   Uipanel: {fileID: 1492393841}
+  _camera: {fileID: 532899569}
+  _cameraFly: {fileID: 532899573}
 --- !u!65 &2096191720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20352,8 +20374,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ce7e12439f16f4d95beab154710e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitPrefab: {fileID: 0}
-  SpawnPoint: {fileID: 0}
+  Uipanel: {fileID: 1492393841}
+  _camera: {fileID: 532899569}
+  _cameraFly: {fileID: 532899573}
+  unitPrefab: {fileID: 4185623572910277781, guid: 68eb305430b854240b1d266d78486a1c,
+    type: 3}
+  _blockMeshRenderer: {fileID: 142533184}
+  SpawnPoint: {fileID: 142533182}
   _moveSpeed: 1
   _health: 10
   _lightDamage: 1
