@@ -11,7 +11,6 @@ public class PatrolBehaviour : StateMachineBehaviour
     {
         _timer = 0;
         _point = FindObjectOfType<Point>().transform;
-
         agent = animator.GetComponent<NavMeshAgent>();
         agent.SetDestination(_point.position);
 
