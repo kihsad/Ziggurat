@@ -109,7 +109,7 @@ NavMeshSettings:
     agentRadius: 0.5
     agentHeight: 2
     agentSlope: 45
-    agentClimb: 0.5
+    agentClimb: 1
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: b301cae0b8fc5c24fa990fd7925dcf25, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 5fe53c05116f0ba40b351b2f9fa381f1, type: 2}
 --- !u!1001 &6742464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9787,7 +9787,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1010354911}
   - component: {fileID: 1010354913}
-  - component: {fileID: 1010354912}
   - component: {fileID: 1010354914}
   - component: {fileID: 1010354915}
   m_Layer: 0
@@ -9813,21 +9812,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1010354912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010354910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15d4f73f6d727f478082833373ab470, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Uipanel: {fileID: 2015290896}
-  _camera: {fileID: 532899569}
-  _cameraFly: {fileID: 532899573}
 --- !u!65 &1010354913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9872,11 +9856,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Uipanel: {fileID: 2015290896}
-  _camera: {fileID: 0}
-  _cameraFly: {fileID: 0}
-  unitPrefab: {fileID: 0}
-  _blockMeshRenderer: {fileID: 0}
-  SpawnPoint: {fileID: 0}
+  _camera: {fileID: 532899569}
+  _cameraFly: {fileID: 532899573}
+  _unitPrefab: {fileID: 8591622513442050379, guid: 273ecf7fee2bb8443a7240797985c244,
+    type: 3}
+  _blockMeshRenderer: {fileID: 1975873408}
   _moveSpeed: 1
   _health: 10
   _lightDamage: 1
@@ -10530,7 +10514,6 @@ GameObject:
   - component: {fileID: 1089828003}
   - component: {fileID: 1089828002}
   - component: {fileID: 1089828001}
-  - component: {fileID: 1089828000}
   m_Layer: 5
   m_Name: GGCreateButton
   m_TagString: Untagged
@@ -10558,31 +10541,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -144}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1089828000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089827998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24ce7e12439f16f4d95beab154710e80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Uipanel: {fileID: 1492393841}
-  _camera: {fileID: 532899569}
-  _cameraFly: {fileID: 532899573}
-  unitPrefab: {fileID: 4185623572910277781, guid: 68eb305430b854240b1d266d78486a1c,
-    type: 3}
-  _blockMeshRenderer: {fileID: 142533184}
-  SpawnPoint: {fileID: 142533182}
-  _moveSpeed: 1
-  _health: 10
-  _lightDamage: 1
-  _heavyDamage: 3
-  _missingChance: 0.5
-  _criticalChance: 2.5
 --- !u!114 &1089828001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10626,7 +10584,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1089828000}
+      - m_Target: {fileID: 2096191722}
         m_MethodName: InstantiateKnightUnit
         m_Mode: 1
         m_Arguments:
@@ -10686,7 +10644,6 @@ GameObject:
   - component: {fileID: 1098850022}
   - component: {fileID: 1098850021}
   - component: {fileID: 1098850020}
-  - component: {fileID: 1098850023}
   m_Layer: 5
   m_Name: RGCreateButton
   m_TagString: Untagged
@@ -10757,8 +10714,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1098850023}
-        m_MethodName: CreateUnit
+      - m_Target: {fileID: 1010354915}
+        m_MethodName: InstantiateKnightUnit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10805,31 +10762,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098850018}
   m_CullTransparentMesh: 0
---- !u!114 &1098850023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098850018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f20e8e45cccde34a92484867d3080a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Uipanel: {fileID: 2015290896}
-  _camera: {fileID: 532899569}
-  _cameraFly: {fileID: 532899573}
-  unitPrefab: {fileID: 8591622513442050379, guid: 273ecf7fee2bb8443a7240797985c244,
-    type: 3}
-  _blockMeshRenderer: {fileID: 1975873408}
-  SpawnPoint: {fileID: 1975873406}
-  _moveSpeed: 1
-  _health: 10
-  _lightDamage: 1
-  _heavyDamage: 3
-  _missingChance: 0.5
-  _criticalChance: 2.5
 --- !u!1001 &1099884641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13075,7 +13007,6 @@ GameObject:
   - component: {fileID: 1282461615}
   - component: {fileID: 1282461614}
   - component: {fileID: 1282461613}
-  - component: {fileID: 1282461612}
   m_Layer: 5
   m_Name: BGCreateButton
   m_TagString: Untagged
@@ -13103,31 +13034,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -144}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1282461612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1282461610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24ce7e12439f16f4d95beab154710e80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Uipanel: {fileID: 141816858}
-  _camera: {fileID: 532899569}
-  _cameraFly: {fileID: 532899573}
-  unitPrefab: {fileID: 9037266777420385061, guid: bc98beccb39f74e40a388467d9a13ea5,
-    type: 3}
-  _blockMeshRenderer: {fileID: 1965134314}
-  SpawnPoint: {fileID: 1965134312}
-  _moveSpeed: 1
-  _health: 10
-  _lightDamage: 1
-  _heavyDamage: 3
-  _missingChance: 0.5
-  _criticalChance: 2.5
 --- !u!114 &1282461613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13171,7 +13077,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1282461612}
+      - m_Target: {fileID: 1617742202}
         m_MethodName: InstantiateKnightUnit
         m_Mode: 1
         m_Arguments:
@@ -16345,7 +16251,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1617742198}
   - component: {fileID: 1617742200}
-  - component: {fileID: 1617742199}
   - component: {fileID: 1617742201}
   - component: {fileID: 1617742202}
   m_Layer: 0
@@ -16371,21 +16276,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &1617742199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617742197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15d4f73f6d727f478082833373ab470, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Uipanel: {fileID: 141816858}
-  _camera: {fileID: 532899569}
-  _cameraFly: {fileID: 532899573}
 --- !u!65 &1617742200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16432,10 +16322,9 @@ MonoBehaviour:
   Uipanel: {fileID: 141816858}
   _camera: {fileID: 532899569}
   _cameraFly: {fileID: 532899573}
-  unitPrefab: {fileID: 9037266777420385061, guid: bc98beccb39f74e40a388467d9a13ea5,
+  _unitPrefab: {fileID: 9037266777420385061, guid: bc98beccb39f74e40a388467d9a13ea5,
     type: 3}
   _blockMeshRenderer: {fileID: 1965134314}
-  SpawnPoint: {fileID: 1965134312}
   _moveSpeed: 1
   _health: 10
   _lightDamage: 1
@@ -20290,7 +20179,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2096191718}
   - component: {fileID: 2096191720}
-  - component: {fileID: 2096191719}
   - component: {fileID: 2096191721}
   - component: {fileID: 2096191722}
   m_Layer: 0
@@ -20316,21 +20204,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &2096191719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096191717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15d4f73f6d727f478082833373ab470, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Uipanel: {fileID: 1492393841}
-  _camera: {fileID: 532899569}
-  _cameraFly: {fileID: 532899573}
 --- !u!65 &2096191720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20377,10 +20250,9 @@ MonoBehaviour:
   Uipanel: {fileID: 1492393841}
   _camera: {fileID: 532899569}
   _cameraFly: {fileID: 532899573}
-  unitPrefab: {fileID: 4185623572910277781, guid: 68eb305430b854240b1d266d78486a1c,
+  _unitPrefab: {fileID: 4185623572910277781, guid: 68eb305430b854240b1d266d78486a1c,
     type: 3}
   _blockMeshRenderer: {fileID: 142533184}
-  SpawnPoint: {fileID: 142533182}
   _moveSpeed: 1
   _health: 10
   _lightDamage: 1

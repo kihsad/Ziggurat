@@ -1,48 +1,46 @@
-﻿
-using System.Runtime.Remoting.Messaging;
+﻿using System.Runtime.Remoting.Messaging;
 using UnityEngine;
-using static Ziggurat.UnitCreator;
+
+[RequireComponent(typeof(Outline))]
+public class Interactable : MonoBehaviour
+{
+    private Outline outline;
+
+    [Header("UI")]
+
+    [SerializeField] private GameObject Uipanel;
+    [SerializeField] private Camera _camera;
+    [SerializeField] private CameraFly _cameraFly;
+
+    //private GameObject Uipanel;
 
 
-    [RequireComponent(typeof(Outline))]
-    public class Interactable : MonoBehaviour
+    private void OnEnable()
     {
-        private Outline outline;
-
-        [Header("UI")]
-
-        [SerializeField] private GameObject Uipanel;
-        [SerializeField] private Camera _camera;
-        [SerializeField] private CameraFly _cameraFly;
-
-        //private GameObject Uipanel;
+        outline = GetComponent<Outline>();
+        outline.OutlineWidth = 0;
+        Uipanel.SetActive(false);
 
 
-        private void OnEnable()
-        {
-            outline = GetComponent<Outline>();
-            outline.OutlineWidth = 0;
-            Uipanel.SetActive(false);
+    }
+    public void OnHoverEnter()
+    {
 
-
-        }
-        public void OnHoverEnter()
-        {
-            
-            outline.OutlineWidth = 10;
-            Uipanel.SetActive(true);
-            _cameraFly.GetComponent<CameraFly>().enabled = false;
+        outline.OutlineWidth = 10;
+        Uipanel.SetActive(true);
+        _cameraFly.GetComponent<CameraFly>().enabled = false;
 
 
     }
     public void OnHoverExit()
-        {
-            outline.OutlineWidth = 0;
-            Uipanel.SetActive(false);
-            _cameraFly.GetComponent<CameraFly>().enabled = true;
+    {
+        outline.OutlineWidth = 0;
+        Uipanel.SetActive(false);
+        _cameraFly.GetComponent<CameraFly>().enabled = true;
 
     }
 
-       
-    }
+
+
+}
 

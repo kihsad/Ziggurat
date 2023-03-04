@@ -1,26 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class PatrolBehaviour : StateMachineBehaviour
 {
-    float timer;
-    Transform point;
-    NavMeshAgent agent;
+    private float _timer;
+    private Transform _point;
+    private NavMeshAgent agent;
 
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        timer = 0;
-        Transform pointObject = FindObjectOfType<Point>().transform;
+        _timer = 0;
+        _point = FindObjectOfType<Point>().transform;
 
         agent = animator.GetComponent<NavMeshAgent>();
-        agent.SetDestination(point.position);
+        agent.SetDestination(_point.position);
 
     }
 
-    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //if (agent.remainingDistance <= agent.stoppingDistance)
@@ -32,7 +28,6 @@ public class PatrolBehaviour : StateMachineBehaviour
         */
     }
 
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //agent.SetDestination(agent.transform.position);
