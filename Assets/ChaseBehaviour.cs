@@ -11,26 +11,39 @@ public class ChaseBehaviour : StateMachineBehaviour
     private Transform _greenKnight;
     private float _attackRange = 2;
     private float _chaseRange = 10;
-    List<Transform> _enemies = new List<Transform>();
+
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _agent = animator.GetComponent<NavMeshAgent>();
         _agent.speed = 4;
 
-        _redKnight = FindObjectOfType<RedKnight>().transform;
-        _blueKnight = FindObjectOfType<BlueKnight>().transform;
-        _greenKnight = FindObjectOfType<GreenKnight>().transform;
+
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (this.GetComponent<RedKnight>())
+        void CheckCollider(Vector3 center, float radius)
         {
-            _enemies.Add(_greenKnight);
-            _enemies.Add(_blueKnight);
+            int maxColliders = 10;
+            Collider[] hitColliders = new Collider[maxColliders];
+            int numColliders = Physics.OverlapSphereNonAlloc(center, radius, hitColliders);
+            for (int i = 0; i < numColliders; i++)
+            {
+                if (hitColliders[i] is _enemies)
+                    {
+                    _agent.SetDestination(_enemies[0].position);
+                    }
+                //hitColliders[i].SendMessage("AddDamage");
+            }
         }
-        _agent.SetDestination(_enemies[0].position);
+
+        //if (this.GetComponent<RedKnight>())
+        //{
+        //    _enemies.Add(_greenKnight);
+        //    _enemies.Add(_blueKnight);
+        //}
+        //_agent.SetDestination(_enemies[0].position);
         private float distance = Vector3.Distance(_agent.transform.position, _enemies[0].position);
         //if (distance < attackRange)
         //    animator.SetBool("isAttacking", true);
