@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class ChaseBehaviour : StateMachineBehaviour
@@ -23,20 +21,20 @@ public class ChaseBehaviour : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        void CheckCollider(Vector3 center, float radius)
-        {
-            int maxColliders = 10;
-            Collider[] hitColliders = new Collider[maxColliders];
-            int numColliders = Physics.OverlapSphereNonAlloc(center, radius, hitColliders);
-            for (int i = 0; i < numColliders; i++)
-            {
-                if (hitColliders[i] is _enemies)
-                    {
-                    _agent.SetDestination(_enemies[0].position);
-                    }
-                //hitColliders[i].SendMessage("AddDamage");
-            }
-        }
+        //void CheckCollider(Vector3 center, float radius)
+        //{
+        //    int maxColliders = 10;
+        //    Collider[] hitColliders = new Collider[maxColliders];
+        //    int numColliders = Physics.OverlapSphereNonAlloc(center, radius, hitColliders);
+        //    for (int i = 0; i < numColliders; i++)
+        //    {
+        //        if (hitColliders[i] is _enemies)
+        //            {
+        //            _agent.SetDestination(_enemies[0].position);
+        //            }
+        //        //hitColliders[i].SendMessage("AddDamage");
+        //    }
+        //}
 
         //if (this.GetComponent<RedKnight>())
         //{
@@ -44,7 +42,7 @@ public class ChaseBehaviour : StateMachineBehaviour
         //    _enemies.Add(_blueKnight);
         //}
         //_agent.SetDestination(_enemies[0].position);
-        private float distance = Vector3.Distance(_agent.transform.position, _enemies[0].position);
+        //private float distance = Vector3.Distance(_agent.transform.position, _enemies[0].position);
         //if (distance < attackRange)
         //    animator.SetBool("isAttacking", true);
 

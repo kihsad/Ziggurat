@@ -5,14 +5,14 @@ public class PatrolBehaviour : StateMachineBehaviour
 {
     private float _timer;
     private Transform _point;
-    private NavMeshAgent agent;
+    private NavMeshAgent _agent;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _timer = 0;
         _point = FindObjectOfType<Point>().transform;
-        agent = animator.GetComponent<NavMeshAgent>();
-        agent.SetDestination(_point.position);
+        _agent = animator.GetComponent<NavMeshAgent>();
+        _agent.SetDestination(_point.position);
 
     }
 
