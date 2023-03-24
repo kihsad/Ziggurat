@@ -17,12 +17,13 @@ public class CameraFly : MonoBehaviour {
 	Quaternion originalRotation;
 
 
-	void Start() {
+	void Start() 
+	{
 		originalRotation = transform.rotation;
 	}
 
-	void Update() {
-		//Движения мыши -> Вращение камеры
+	void Update() 
+	{
 		rotationX += Input.GetAxis("Mouse X") * mouseSensitivity;
 		rotationY += Input.GetAxis("Mouse Y") * mouseSensitivity;
 		rotationX = ClampAngle(rotationX, minimumX, maximumX);
@@ -30,7 +31,6 @@ public class CameraFly : MonoBehaviour {
 		Quaternion xQuaternion = Quaternion.AngleAxis(rotationX, Vector3.up);
 		Quaternion yQuaternion = Quaternion.AngleAxis(rotationY, Vector3.left);
 		transform.rotation = originalRotation * xQuaternion * yQuaternion;
-		// перемещение камеры
 		transfer = transform.forward * Input.GetAxis("Vertical");
 		transfer += transform.right * Input.GetAxis("Horizontal");
 		transform.position += transfer * speed * Time.deltaTime;

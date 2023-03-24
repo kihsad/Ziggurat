@@ -11,19 +11,13 @@ public class TargetDetector : MonoBehaviour
     private NavMeshAgent _agent;
     private Collider[] _targets = new Collider[100];
     private float _stoppingDistance = 2;
-
-    //public float stoppingDistance
-    //{
-    //    get => _stoppingDistance;
-    //    set
-    //    {
-    //        _stoppingDistance = value;
-    //    }
-    //}
+    private Animator _animator;
 
     private void Start()
     {
-        _agent = GetComponent<NavMeshAgent>();
+        var _fastAttackHash = Animator.StringToHash("isFastAttacking");
+       _agent = GetComponent<NavMeshAgent>();
+       _animator = GetComponent<Animator>();
     }
 
     public void Detect()
@@ -34,7 +28,7 @@ public class TargetDetector : MonoBehaviour
             _distance = Vector3.Distance(_agent.transform.position, _targets[0].ClosestPoint(transform.position));
             if (_distance <= _stoppingDistance)
             {
-                //AttackBehaviour.OnStateEnter(_agent, _target, _layerMask);
+                _animator.SetBool("isFastAttacking", true);
             }
         }
     }
