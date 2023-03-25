@@ -7,12 +7,12 @@ namespace Ziggurat
         [SerializeField] private GameObject _unitPrefab;
         [SerializeField] private MeshRenderer _blockMeshRenderer;
         [Header("Configs")]
-        [SerializeField] protected float _moveSpeed;
-        [SerializeField] protected int _health;
-        [SerializeField] protected int _lightDamage;
-        [SerializeField] protected int _heavyDamage;
-        [SerializeField] protected float _missingChance;
-        [SerializeField] protected float _criticalChance;
+        [SerializeField] public float _moveSpeed;
+        [SerializeField] public int _health;
+        [SerializeField] public int _lightDamage;
+        [SerializeField] public int _heavyDamage;
+        [SerializeField] public float _missingChance;
+        [SerializeField] public float _criticalChance;
         
 
         public void InstantiateKnightUnit()
