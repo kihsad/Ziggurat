@@ -35,6 +35,7 @@ namespace Ziggurat
         {
             var speedValue = _speedSlider.value;
             _speedSlider.value = _moveSpeed;
+            //_moveSpeed = _speedSlider.value;
         }
 
         public void ChangeLDValue(int value)

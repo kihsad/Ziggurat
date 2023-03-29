@@ -1,37 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class PatrolBehaviour : StateMachineBehaviour
+namespace Ziggurat
 {
-    private float _timer;
-    private Transform _point;
-    private NavMeshAgent agent;
-
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public class PatrolBehaviour : StateMachineBehaviour
     {
-        _timer = 0;
-        _point = FindObjectOfType<Point>().transform;
+        private Transform _point;
+        private NavMeshAgent _agent;
+        private Data _data;
 
-        agent = animator.GetComponent<NavMeshAgent>();
-        agent.SetDestination(_point.position);
-
+        override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+        {
+            _point = FindObjectOfType<Point>().transform;
+            _agent = animator.GetComponent<NavMeshAgent>();
+            //_agent.speed = _data._moveSpeed;
+            _agent.SetDestination(_point.position);
+        }
     }
-
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        //if (agent.remainingDistance <= agent.stoppingDistance)
-         //   agent.SetDestination(points[Random.Range(0, points.Count)].position);
-
-        /* timer += Time.deltaTime;
-         if (timer > 1)
-             animator.SetBool("isPatrolling", false);
-        */
-    }
-
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        //agent.SetDestination(agent.transform.position);
-    }
-
-
 }

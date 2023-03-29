@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Point : MonoBehaviour
+namespace Ziggurat
 {
+    public class Point : MonoBehaviour
+    {
 
+    }
 }
