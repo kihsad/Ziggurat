@@ -15,10 +15,15 @@ namespace Ziggurat
         [SerializeField] public float _criticalChance;
         
 
-        public void InstantiateKnightUnit()
+        public void InstantiateKnightUnit(UnitData unitData)
         {
-            Instantiate(_unitPrefab, _blockMeshRenderer.transform.position + Vector3.up * _blockMeshRenderer.bounds.extents.y, Quaternion.identity);
-            Debug.Log("Unit Knight is on!");
+
+            GameObject knight = Instantiate(_unitPrefab, _blockMeshRenderer.transform.position + Vector3.up *
+                _blockMeshRenderer.bounds.extents.y, Quaternion.identity);
+
+
+            knight.GetComponent<Animator>().GetBehaviour<PatrolBehaviour>().MoveSpeed = unitData.MoveSpeed;
+
         }
 
         

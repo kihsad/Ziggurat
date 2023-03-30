@@ -2,9 +2,9 @@
 {
     public class CreatorButton : UnitCreator
     {
-        public void CreateUnit()
+        public void CreateUnit(UnitData unitData)
         {
-            InstantiateKnightUnit();
+            InstantiateKnightUnit(unitData);
         }
     }
 

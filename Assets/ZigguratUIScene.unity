@@ -2232,6 +2232,7 @@ GameObject:
   - component: {fileID: 141816861}
   - component: {fileID: 141816860}
   - component: {fileID: 141816859}
+  - component: {fileID: 141816863}
   m_Layer: 5
   m_Name: BlueGateUI
   m_TagString: Untagged
@@ -2319,6 +2320,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &141816863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141816858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dffd02e5a820724d9eadb1aa9f119d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedSlider: {fileID: 1240263850}
+  _healthSlider: {fileID: 729434039}
+  _lightDamageSlider: {fileID: 217779519}
+  _heavyDamageSlider: {fileID: 1245643011}
+  _missingChanceSlider: {fileID: 1873795740}
+  _critDamageSlider: {fileID: 549454079}
+  _creationButton: {fileID: 1282461613}
+  _unitCreator: {fileID: 1617742202}
 --- !u!1 &142533182 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 59bfaabf5c24e1544a99ff1e59e464b5,
@@ -9825,6 +9846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5dd1a424c89100468b76b5761d58ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitCreator: {fileID: 0}
   _moveSpeed: 0
   _health: 0
   _lightDamage: 0
@@ -10602,18 +10624,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1089828002}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2096191722}
-        m_MethodName: InstantiateKnightUnit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1089828002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10732,18 +10743,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1098850021}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1010354915}
-        m_MethodName: InstantiateKnightUnit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1098850021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13095,18 +13095,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1282461614}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1617742202}
-        m_MethodName: InstantiateKnightUnit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1282461614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15384,6 +15373,7 @@ GameObject:
   - component: {fileID: 1492393844}
   - component: {fileID: 1492393843}
   - component: {fileID: 1492393842}
+  - component: {fileID: 1492393846}
   m_Layer: 5
   m_Name: GreenGateUI
   m_TagString: Untagged
@@ -15471,6 +15461,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1492393846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492393841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dffd02e5a820724d9eadb1aa9f119d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedSlider: {fileID: 726982703}
+  _healthSlider: {fileID: 1162349888}
+  _lightDamageSlider: {fileID: 81610770}
+  _heavyDamageSlider: {fileID: 550914980}
+  _missingChanceSlider: {fileID: 661734232}
+  _critDamageSlider: {fileID: 1192814105}
+  _creationButton: {fileID: 1089828001}
+  _unitCreator: {fileID: 2096191722}
 --- !u!1 &1496638255
 GameObject:
   m_ObjectHideFlags: 0
@@ -16308,6 +16318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5dd1a424c89100468b76b5761d58ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitCreator: {fileID: 0}
   _moveSpeed: 0
   _health: 0
   _lightDamage: 0
@@ -19441,6 +19452,7 @@ GameObject:
   - component: {fileID: 2015290899}
   - component: {fileID: 2015290898}
   - component: {fileID: 2015290897}
+  - component: {fileID: 2015290901}
   m_Layer: 5
   m_Name: RedGateUI
   m_TagString: Untagged
@@ -19528,6 +19540,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2015290901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015290896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dffd02e5a820724d9eadb1aa9f119d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedSlider: {fileID: 230566965}
+  _healthSlider: {fileID: 1340061269}
+  _lightDamageSlider: {fileID: 1137222827}
+  _heavyDamageSlider: {fileID: 23997804}
+  _missingChanceSlider: {fileID: 1080208805}
+  _critDamageSlider: {fileID: 1108723780}
+  _creationButton: {fileID: 1098850020}
+  _unitCreator: {fileID: 1010354915}
 --- !u!1 &2015672984
 GameObject:
   m_ObjectHideFlags: 0
@@ -20255,6 +20287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5dd1a424c89100468b76b5761d58ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unitCreator: {fileID: 0}
   _moveSpeed: 0
   _health: 0
   _lightDamage: 0
