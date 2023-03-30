@@ -7,10 +7,10 @@ namespace Ziggurat
     public class DamageController : MonoBehaviour
     {
         private int _health;
-        private Data _data;
+        private UnitData _data;
         void Start()
         {
-            _health = _data._health;
+            _health = _data.Health;
         }
         //public event Action OnDead;
         //public event Action<int, float> OnHealthChange;
@@ -49,9 +49,9 @@ namespace Ziggurat
             _health -= damage;
         }
 
-        private void OnEnable() => Restore();
+        //private void OnEnable() => Restore();
 
-        public void Restore() => _health = MaxHealth;
+        //public void Restore() => _health = MaxHealth;
 
     }
 }

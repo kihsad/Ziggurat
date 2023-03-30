@@ -15,14 +15,14 @@ namespace Ziggurat
         private float _stoppingDistance = 2;
         private Animator _animator;
         private int _health;
-        private Data _data;
+        private UnitData _data;
 
         private void Start()
         {
             var _fastAttackHash = Animator.StringToHash("isFastAttacking");
             _agent = GetComponent<NavMeshAgent>();
             _animator = GetComponent<Animator>();
-            _health = _data._health;
+            _health = _data.Health;
         }
 
         public void Detect()
