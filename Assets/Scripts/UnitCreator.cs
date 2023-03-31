@@ -24,6 +24,7 @@ namespace Ziggurat
 
             knight.GetComponent<Animator>().GetBehaviour<PatrolBehaviour>().MoveSpeed = unitData.MoveSpeed;
 
+            knight.GetComponent<Health>().Value = unitData.Health;
         }
 
         

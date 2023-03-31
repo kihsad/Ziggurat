@@ -22,20 +22,19 @@ namespace Ziggurat
         public Slider _criticalChanceSlider;
         public TextMeshProUGUI _criticalChanceText;
 
-        public void ChangeHealthValue(int value)
+        public void ChangeHealthValue(int UnitData)
         {
-            //var healthValue = _healthSlider.value; 
-            //_healthSlider.value = _health;
-            //_healthText = healthValue.ToString();
+          
 
             _healthText.text = _healthSlider.value.ToString();
+            _healthSlider.value = _health;
         }
 
         public void ChangeSpeedValue(float value)
         {
             var speedValue = _speedSlider.value;
             _speedSlider.value = _moveSpeed;
-            //_moveSpeed = _speedSlider.value;
+            
         }
 
         public void ChangeLDValue(int value)
