@@ -35,9 +35,6 @@ namespace Ziggurat
                 {
                     _animator.SetBool("isFastAttacking", true);
 
-                    _health--;
-                    Debug.Log(_health);
-
                 }
             }
         }

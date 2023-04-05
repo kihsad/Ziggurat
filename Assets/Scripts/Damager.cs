@@ -8,13 +8,13 @@ namespace Ziggurat
 
         private Animator _animator;
 
-        public Transform _attackPoint;
+        private Transform _attackPoint;
 
         public float _attackRange = 0.5f;
 
         private Collider[] _targets = new Collider[100];
 
-        public Health _health;
+        private Health _health;
 
 
         public LayerMask _enemyLayer;
@@ -24,8 +24,10 @@ namespace Ziggurat
         public void Attack()
         {
             _animator.SetTrigger("isFastAttacking");
-            //Physics.OverlapSphereNonAlloc(_attackPoint.position, _attackRange, _targets, _enemyLayer);
-
+            for (int i = 0; i < Physics.OverlapSphereNonAlloc(_attackPoint.position, _attackRange, _targets, _enemyLayer); i++)
+            {
+                Debug.Log("hit");
+            }
             //foreach 
 
 
@@ -33,20 +35,21 @@ namespace Ziggurat
 
         }
 
-      
 
-        public void OnTriggerEnter(Collider other)
-        {
-            if (other.TryGetComponent(out Health health))
-            {
-                health.TakeDamage(_unitData.LightDamage);
-            }
-        }
+
+        //public void OnTriggerEnter(Collider other)
+        //{
+        //    if (other.TryGetComponent(out Health health))
+        //    {
+        //        health.TakeDamage(_unitData.LightDamage);
+        //        Debug.Log("hit");
+        //    }
+        //}
 
 
         void Start()
         {
-
+            _attackPoint = FindObjectOfType<AttackPoint>().transform;
             _health = GetComponent<Health>(); 
             _unitData = GetComponent<UnitData>();
         }
