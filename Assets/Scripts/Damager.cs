@@ -10,7 +10,7 @@ namespace Ziggurat
 
         private Transform _attackPoint;
 
-        public float _attackRange = 0.5f;
+        public float _attackRange = 10f;
 
         private Collider[] _targets = new Collider[100];
 
@@ -23,16 +23,17 @@ namespace Ziggurat
 
         public void Attack()
         {
-            _animator.SetTrigger("isFastAttacking");
             for (int i = 0; i < Physics.OverlapSphereNonAlloc(_attackPoint.position, _attackRange, _targets, _enemyLayer); i++)
             {
                 Debug.Log("hit");
             }
-            //foreach 
 
+        }
 
-            //OnTriggerEnter();
-
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(_attackPoint.position, _attackRange);
         }
 
 

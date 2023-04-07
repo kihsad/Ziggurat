@@ -16,6 +16,7 @@ namespace Ziggurat
         private Animator _animator;
         private int _health;
         private UnitData _data;
+        private Damager _damager;
 
         private void Start()
         {
@@ -23,6 +24,7 @@ namespace Ziggurat
             _agent = GetComponent<NavMeshAgent>();
             _animator = GetComponent<Animator>();
             _health = _data.Health;
+            _damager = GetComponent<Damager>();
         }
 
         public void Detect()
@@ -34,6 +36,7 @@ namespace Ziggurat
                 if (_distance <= _stoppingDistance)
                 {
                     _animator.SetBool("isFastAttacking", true);
+                    _damager.Attack();
 
                 }
             }
