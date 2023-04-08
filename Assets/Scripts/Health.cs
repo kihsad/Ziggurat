@@ -35,10 +35,10 @@ namespace Ziggurat
         {
             Value -= damage;
             
-            Debug.Log(Value);
+            Debug.Log(Value + name);
         }
 
-        public void Kill()
+        public void Die()
         {
             Value = 0;
         }
