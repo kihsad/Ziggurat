@@ -1,5 +1,48 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1922284862057152647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4608113914872947195}
+  - component: {fileID: 2086527105215691443}
+  m_Layer: 9
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4608113914872947195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922284862057152647}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.912, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4185623573535678004}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2086527105215691443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922284862057152647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f402c975cca0544f8e0b922449aa6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4185623572613263271
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,10 +273,11 @@ GameObject:
   - component: {fileID: 4185623572910277785}
   - component: {fileID: 4185623572910277782}
   - component: {fileID: 4185623572910277783}
-  - component: {fileID: 4185623572910277780}
   - component: {fileID: 9099004240257714015}
   - component: {fileID: 1609056438070371896}
   - component: {fileID: 8110879065500722697}
+  - component: {fileID: -7994886804524960548}
+  - component: {fileID: 7078324000023138027}
   m_Layer: 9
   m_Name: GreenRPGHeroPolyart (1)
   m_TagString: Untagged
@@ -306,20 +350,6 @@ CapsuleCollider:
   m_Height: 2.03
   m_Direction: 1
   m_Center: {x: 0, y: 0.99, z: 0}
---- !u!114 &4185623572910277780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4185623572910277781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 496352f3a2cdaf14499e6df6865143eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 4185623572910277785}
-  _collider: {fileID: 4185623573535678003}
 --- !u!195 &9099004240257714015
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -371,6 +401,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _me: {fileID: 8110879065500722697}
+--- !u!114 &-7994886804524960548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4185623572910277781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e15ea50c8abfb944a9e5c0380d10c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7078324000023138027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4185623572910277781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715a2e39a6f62814e8a07dde3a68d312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackRange: 1
+  _enemyLayer:
+    serializedVersion: 2
+    m_Bits: 1280
 --- !u!1 &4185623572935645805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,7 +1143,8 @@ Transform:
   m_LocalRotation: {x: -0.70839787, y: -0.00031848613, z: -0.0022091607, w: 0.7058099}
   m_LocalPosition: {x: 0.11881603, y: -0.026984178, z: 0.007319052}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4608113914872947195}
   m_Father: {fileID: 4185623573217317818}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -14,15 +14,14 @@ namespace Ziggurat
         private Collider[] _targets = new Collider[100];
         private float _stoppingDistance = 2;
         private Animator _animator;
-        private int _health;
-        private UnitData _data;
+        private Damager _damager;
 
         private void Start()
         {
             var _fastAttackHash = Animator.StringToHash("isFastAttacking");
             _agent = GetComponent<NavMeshAgent>();
             _animator = GetComponent<Animator>();
-            _health = _data.Health;
+            _damager = GetComponent<Damager>();
         }
 
         public void Detect()
@@ -34,9 +33,7 @@ namespace Ziggurat
                 if (_distance <= _stoppingDistance)
                 {
                     _animator.SetBool("isFastAttacking", true);
-
-                    _health--;
-                    Debug.Log(_health);
+                    _damager.Attack();
 
                 }
             }

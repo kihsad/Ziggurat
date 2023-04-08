@@ -1652,7 +1652,8 @@ Transform:
   m_LocalRotation: {x: -0.70839787, y: -0.00031848613, z: -0.0022091607, w: 0.7058099}
   m_LocalPosition: {x: 0.11881603, y: -0.026984178, z: 0.007319052}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 3725521935019845458}
   m_Father: {fileID: 8587383951819857439}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1759,10 +1760,11 @@ GameObject:
   - component: {fileID: 8532544406534033615}
   - component: {fileID: 8592048530499852854}
   - component: {fileID: 8592048530499852855}
-  - component: {fileID: 8592048530499852858}
   - component: {fileID: 8858998847688071683}
   - component: {fileID: 1695808433407622259}
   - component: {fileID: 1212150146022564729}
+  - component: {fileID: 8679325622425859693}
+  - component: {fileID: -93113472111808895}
   m_Layer: 10
   m_Name: RedRPGHeroPolyart
   m_TagString: Untagged
@@ -1835,20 +1837,6 @@ CapsuleCollider:
   m_Height: 2.03
   m_Direction: 1
   m_Center: {x: 0, y: 0.99, z: 0}
---- !u!114 &8592048530499852858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8591622513442050379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 496352f3a2cdaf14499e6df6865143eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 8532544406534033615}
-  _collider: {fileID: 8592048530499852857}
 --- !u!195 &8858998847688071683
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1900,6 +1888,34 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 768
   _distance: 20
+--- !u!114 &8679325622425859693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8591622513442050379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e15ea50c8abfb944a9e5c0380d10c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-93113472111808895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8591622513442050379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715a2e39a6f62814e8a07dde3a68d312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackRange: 1
+  _enemyLayer:
+    serializedVersion: 2
+    m_Bits: 768
 --- !u!1 &8591626340397802007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2424,3 +2440,46 @@ Transform:
   m_Father: {fileID: 8587383951819857439}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8708087637271077871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3725521935019845458}
+  - component: {fileID: 6682754475242918940}
+  m_Layer: 10
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3725521935019845458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8708087637271077871}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.004, y: -0.954, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8589427985033150741}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6682754475242918940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8708087637271077871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f402c975cca0544f8e0b922449aa6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -21,9 +21,11 @@ namespace Ziggurat
             GameObject knight = Instantiate(_unitPrefab, _blockMeshRenderer.transform.position + Vector3.up *
                 _blockMeshRenderer.bounds.extents.y, Quaternion.identity);
 
-
             knight.GetComponent<Animator>().GetBehaviour<PatrolBehaviour>().MoveSpeed = unitData.MoveSpeed;
 
+            knight.GetComponent<Health>().Value = unitData.Health;
+
+            knight.GetComponent<Damager>().Damage = unitData.LightDamage;
         }
 
         
